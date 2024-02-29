@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllSurahs } from "../API/AlquranAPI";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 function Surahs() {
     const { data, error, isLoading } = useQuery({
@@ -11,7 +12,7 @@ function Surahs() {
     return (
         <>
             {isLoading ? (
-                <p>loading..</p>
+                <Spinner />
             ) : (
                 <div className="flex-1 grid grid-cols-2 gap-5 pt-[10vh] px-5 pb-[15vh]">
                     {data?.map((surah) => (
