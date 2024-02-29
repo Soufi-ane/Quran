@@ -14,7 +14,7 @@ function Surahs() {
                 <p>loading..</p>
             ) : (
                 <div className="flex-1 grid grid-cols-2 gap-5 pt-[10vh] px-5 pb-[15vh]">
-                    {data.map((surah) => (
+                    {data?.map((surah) => (
                         <Surah surah={surah} key={surah.number} />
                     ))}
                 </div>
