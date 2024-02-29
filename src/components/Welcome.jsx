@@ -1,6 +1,13 @@
+import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
+import { getAllSurahs } from "../API/AlquranAPI";
 
 function Welcome() {
+    const queryClient = useQueryClient();
+    queryClient.prefetchQuery({
+        queryKey: ["surahs"],
+        queryFn: getAllSurahs,
+    });
     const navigate = useNavigate();
     function HandleStart() {
         navigate("Surahs");
