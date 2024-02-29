@@ -1,4 +1,4 @@
-const API_URL = "http://api.alquran.cloud/v1";
+const API_URL = "//api.alquran.cloud/v1";
 const edition = "quran-tajweed";
 
 export async function getAllSurahs() {
