@@ -1,8 +1,8 @@
 const API_URL = "//api.alquran.cloud/v1";
-const edition = "quran-tajweed";
+const Textedition = "quran-tajweed";
 
 export async function getAllSurahs() {
-    const res = await fetch(`${API_URL}/quran/${edition}`);
+    const res = await fetch(`${API_URL}/quran/${Textedition}`);
     const data = await res.json();
     console.log(data);
     const surahs = data?.data?.surahs;
@@ -10,9 +10,7 @@ export async function getAllSurahs() {
 }
 
 export async function getSurah(number) {
-    const res = await fetch(`${API_URL}/surah/${number}/${edition}`);
+    const res = await fetch(`${API_URL}/surah/${number}/${Textedition}`);
     const data = await res.json();
-    // let surahText = "";
-    // data?.data?.ayahs.map((aya) => (surahText += aya.text));
     return { data } || {};
 }

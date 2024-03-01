@@ -38,8 +38,8 @@ function Surah(surah) {
             style={{
                 fontFamily: "Amiri Quran",
             }}
-            className="bg-stone-100 p-3 cursor-pointer rounded-md flex flex-col gap-3 ">
-            <p className="text-lg text-center">{name}</p>
+            className="bg-stone-100 p-3 cursor-pointer rounded-md flex flex-col gap-3 overflow-y-scroll">
+            <p className="text-xl text-center">{name}</p>
             <div className="flex items-center justify-between text-xs">
                 <p className="flex flex-col  items-center">
                     <span>عدد الآيات</span>

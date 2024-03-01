@@ -6,7 +6,7 @@ function Layout() {
         <div style={{ fontFamily: "Poppins" }} className=" h-[100dvh]  flex flex-col">
             <Header />
             <Outlet />
-            <Player />
+            {/* <Player /> */}
         </div>
     );
 }
