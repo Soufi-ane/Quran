@@ -70,7 +70,9 @@ function Player() {
     return (
         <div ref={playerRef}>
             <div
-                className={`bg-white h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 items-center justify-between px-3 `}>
+                className={`bg-white ${
+                    isOpen ? "" : "border-t-2"
+                }  border-stone-200 h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 `}>
                 <div className="flex items-center justify-center gap-3 mt-auto">
                     <div className="text-3xl text-white bg-black inline-block p-3 w-[3.5rem] h-[3.5rem] rounded-md">
                         {isLoading ? <Spinner small={true} /> : <BsSoundwave />}
@@ -125,7 +127,7 @@ function Player() {
             <div
                 className={`bg-white h-[50vh] ${
                     isOpen ? "" : "hidden translate-y-full"
-                } absolute bottom-0 z-0  transition-all duration-100 w-screen flex  justify-center`}>
+                } absolute bottom-0 z-0 border-t-2 rounded-t-md border-stone-300  transition-all duration-100 w-screen flex  justify-center`}>
                 <IoIosArrowDown
                     onClick={HandleMore}
                     className={`text-3xl ${
