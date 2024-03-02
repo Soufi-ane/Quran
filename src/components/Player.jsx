@@ -74,8 +74,22 @@ function Player() {
                     isOpen ? "" : "border-t-2"
                 }  border-stone-200 h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 `}>
                 <div className="flex items-center justify-center gap-3 mt-auto">
-                    <div className="text-3xl text-white bg-black inline-block p-3 w-[3.5rem] h-[3.5rem] rounded-md">
-                        {isLoading ? <Spinner small={true} /> : <BsSoundwave />}
+                    <div
+                        className={`text-3xl text-white bg-black inline-block ${
+                            isLoading ? "p-3" : ""
+                        }  w-[3.5rem] h-[3.5rem] rounded-md`}>
+                        {
+                            isLoading ? (
+                                <Spinner small={true} />
+                            ) : (
+                                <img
+                                    className="rounded-md"
+                                    src="/Quran/img/quran.jpeg"
+                                    alt="quran"
+                                />
+                            )
+                            //  <BsSoundwave />
+                        }
                     </div>
 
                     <div className="text-3xl text-black  flex items-center gap-2 justify-between  ">
