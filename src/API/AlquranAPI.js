@@ -14,3 +14,9 @@ export async function getSurah(number) {
     const data = await res.json();
     return { data } || {};
 }
+
+export async function getSurahsData() {
+    const res = await fetch(`${API_URL}/meta`);
+    const data = await res.json();
+    return data || {};
+}
