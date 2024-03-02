@@ -79,7 +79,7 @@ function Player() {
                     </div>
 
                     <div className="text-3xl text-black  flex items-center gap-2 justify-between  ">
-                        <div className="w-[53vw] flex flex-col justify-center    text-sm font-semibold">
+                        <div className="w-[53vw] flex flex-col justify-end gap-2 px-2  text-sm font-semibold">
                             <div>
                                 <input
                                     className="w-[50vw]"
