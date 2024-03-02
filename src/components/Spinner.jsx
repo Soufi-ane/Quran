@@ -1,5 +1,4 @@
 function Spinner({ small }) {
-    console.log(small);
     return (
         <div
             className={` ${
