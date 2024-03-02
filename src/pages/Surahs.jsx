@@ -14,7 +14,7 @@ function Surahs() {
             {isLoading ? (
                 <Spinner />
             ) : (
-                <div className="flex-1 grid grid-cols-2 gap-5 pt-[10vh] px-5 pb-[15vh]">
+                <div className=" grid h-[97dvh] grid-cols-2 gap-5 pt-[10vh] overflow-y-scroll px-5 pb-[15vh]">
                     {data?.map((surah) => (
                         <Surah surah={surah} key={surah.number} />
                     ))}
@@ -38,7 +38,7 @@ function Surah(surah) {
             style={{
                 fontFamily: "Amiri Quran",
             }}
-            className="bg-stone-100 p-3 cursor-pointer rounded-md flex flex-col gap-3 overflow-y-scroll">
+            className="bg-stone-100 p-3 h-[6rem] cursor-pointer rounded-md flex flex-col gap-3 overflow-y-scroll">
             <p className="text-xl text-center">{name}</p>
             <div className="flex items-center justify-between text-xs">
                 <p className="flex flex-col  items-center">
