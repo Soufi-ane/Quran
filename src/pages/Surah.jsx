@@ -25,7 +25,7 @@ function Surah() {
                         style={{
                             fontFamily: "Amiri Quran",
                         }}
-                        className="pt-[10vh] h-[90vh] px-7  overflow-y-scroll">
+                        className="pt-[10vh] pb-56 h-[90vh] px-7  overflow-y-scroll">
                         <div className="flex flex-col gap-3">
                             <h4 className="text-2xl text-center">{name}</h4>
                             <div className="flex items-center justify-between">
