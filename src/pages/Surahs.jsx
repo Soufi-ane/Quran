@@ -31,7 +31,7 @@ function Surahs() {
                     style={{
                         fontFamily: "Amiri Quran",
                     }}
-                    className=" grid h-[97dvh] grid-cols-2 gap-5 pt-[10vh] overflow-y-scroll px-5 pb-[15vh]">
+                    className=" grid h-[97dvh] grid-cols-2 sm:grid-cols-3 gap-5 pt-[10vh] md:pt-[15vh] overflow-y-scroll px-[8vw] sm:px-[13vw]  md:px-[10vw] lg:grid-cols-6 lg:px-[8vw]  xl:px-[13vw]  pb-[15vh]">
                     {data?.map((surah) => (
                         <Surah surah={surah} key={surah.number} />
                     ))}
@@ -52,7 +52,7 @@ function Surah(surah) {
     return (
         <div
             onClick={HandleSurah}
-            className="bg-stone-100 p-3 h-[6rem] cursor-pointer rounded-md flex flex-col gap-3 overflow-y-scroll">
+            className="bg-stone-100  p-3 h-[6rem] cursor-pointer rounded-md flex overflow-y-hidden flex-col gap-3 ">
             <p className="text-xl text-center">{name}</p>
             <div className="flex items-center justify-between text-xs">
                 <p className="flex flex-col  items-center">

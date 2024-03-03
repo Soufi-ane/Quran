@@ -4,9 +4,12 @@ import { getSurah } from "../API/AlquranAPI";
 
 import Spinner from "../components/Spinner";
 import Player from "../components/Player";
+// import { useContext } from "react";
+// import { DarkModeContext } from "../API/DarkModeContext";
 
 function Surah() {
     const { number } = useParams();
+    // const { isDark, textColor } = useContext(DarkModeContext);
 
     const { data, isLoading, error } = useQuery({
         queryKey: [`surah-${number}`],
@@ -25,7 +28,8 @@ function Surah() {
                         style={{
                             fontFamily: "Amiri Quran",
                         }}
-                        className="pt-[10vh] pb-56 h-[90vh] px-7  overflow-y-scroll">
+                        className={`pt-[10vh] bg-white
+                        }  pb-56 h-[90vh] px-7 md:px-36 lg:px-44 xl:px-72 2xl:px-[20vw] overflow-y-scroll`}>
                         <div className="flex flex-col gap-3">
                             <h4 className="text-2xl text-center">{name}</h4>
                             <div className="flex items-center justify-between">
@@ -40,7 +44,7 @@ function Surah() {
                             </div>
                         </div>
                         <div
-                            className="text-right text-3xl py-8 leading-[3rem]"
+                            className="text-right text-3xl md:text-4xl py-8 md:leading-[4rem] leading-[3.1rem] lg:text-5xl lg:leading-[5rem]"
                             style={{
                                 fontFamily: "Amiri Quran",
                             }}>

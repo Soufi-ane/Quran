@@ -2,7 +2,7 @@ import { BsSoundwave } from "react-icons/bs";
 import { IoPlay } from "react-icons/io5";
 import { IoMdPause } from "react-icons/io";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Reciters } from "../data/Reciters";
 import { useClickOutside } from "../hooks/useClickOutside";
@@ -10,6 +10,7 @@ import { RiArrowDownDoubleFill, RiArrowUpDoubleFill } from "react-icons/ri";
 import Spinner from "../components/Spinner";
 
 import { useParams } from "react-router-dom";
+// import { DarkModeContext } from "../API/DarkModeContext";
 
 function Player() {
     const { number } = useParams();
@@ -23,6 +24,7 @@ function Player() {
     );
 
     const AudioRef = useRef();
+    // const { textColor, mainColor, secondColor } = useContext(DarkModeContext);
 
     useEffect(() => {
         if (isPlaying)
@@ -72,10 +74,10 @@ function Player() {
             <div
                 className={`bg-white ${
                     isOpen ? "" : "border-t-2"
-                }  border-stone-200 h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 `}>
+                }  border-stone-200 h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 sm:px-80 `}>
                 <div className="flex items-center justify-center gap-3 mt-auto">
                     <div
-                        className={`text-3xl text-white bg-black inline-block ${
+                        className={`text-3xl  inline-block ${
                             isLoading ? "p-3" : ""
                         }  w-[3.5rem] h-[3.5rem] rounded-md`}>
                         {
@@ -92,7 +94,7 @@ function Player() {
                         }
                     </div>
 
-                    <div className="text-3xl text-black  flex items-center gap-2 justify-between  ">
+                    <div className="text-3xl  text-black  flex items-center gap-2 justify-between  ">
                         <div className="w-[53vw] flex flex-col justify-end gap-2 px-2  text-sm font-semibold">
                             <div>
                                 <input
@@ -110,7 +112,7 @@ function Player() {
                                     }}
                                 />
                             </div>
-                            <div className="flex items-center justify-between">
+                            <div className={`flex items-center justify-between `}>
                                 <span>{formatTime(currentTiming)}</span>
                                 <span>
                                     {AudioRef.current?.duration
@@ -144,7 +146,7 @@ function Player() {
                 } absolute bottom-0 z-0 border-t-2 rounded-t-md border-stone-300  transition-all duration-100 w-screen flex  justify-center`}>
                 <IoIosArrowDown
                     onClick={HandleMore}
-                    className={`text-3xl ${
+                    className={`text-2xl ${
                         isOpen ? "inline" : "hidden"
                     } transition-all mt-2 absolute right-2 top-1 ml-auto `}
                 />
@@ -171,7 +173,7 @@ function SelectReciter({ reciters, current, setReciter }) {
             style={{
                 fontFamily: "Amiri Quran",
             }}
-            className={`text-xl mt-14  rounded-md w-[90%] h-[30vh] flex items-center ${
+            className={`text-xl mt-14  rounded-md w-[50%] h-[30vh] flex items-center ${
                 isOpen ? "bg-stone-100" : ""
             }  flex-col`}>
             <div
