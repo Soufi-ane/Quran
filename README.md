@@ -1,3 +1,3 @@
 # React + Vite
 
-### Hosted [Here](https://github.com/Soufi-ane/Quran/) 
+### Hosted [Here](https://soufi-ane.github.io/Quran/) 
