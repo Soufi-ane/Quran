@@ -22,9 +22,10 @@ function Welcome() {
                 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
             </p>
             <h4 className="text-2xl font-medium py-10">Welcome</h4>
-            <p className="text-lg font-medium pb-20 px-10">
-                Dive into the Quran, accessible in over 40 languages, with recitations from more
-                than 80 esteemed reciters.
+            <p className="text-lg font-medium pb-20 leading-9 px-10">
+                Dive into the Quran,
+                <br />
+                You can read ...listen, <br /> With recitations from more than 60 esteemed reciters.
             </p>
             <button
                 onClick={HandleStart}

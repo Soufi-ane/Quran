@@ -8,7 +8,7 @@ function Layout() {
     return (
         <div
             style={{ fontFamily: "Poppins" }}
-            className={` h-[100dvh] max-h-[100dvh] bg-white       overflow-y-hidden flex flex-col`}>
+            className={` h-[100dvh] max-h-[90dvh] bg-white       overflow-y-hidden flex flex-col`}>
             <Header />
             <Outlet />
             {/* <Player /> */}

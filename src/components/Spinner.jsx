@@ -10,7 +10,7 @@ function Spinner({ small }) {
             }  flex items-center justify-center`}>
             <div
                 style={{
-                    border: `${small ? `6px solid black` : `8px solid white`}`,
+                    border: `${small ? `6px solid white` : `8px solid black`}`,
                     width: `${small ? " 30px" : "40px"}`,
                     height: `${small ? " 30px" : "40px"}`,
                     borderRadius: "50%",

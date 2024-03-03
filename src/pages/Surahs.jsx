@@ -31,7 +31,7 @@ function Surahs() {
                     style={{
                         fontFamily: "Amiri Quran",
                     }}
-                    className=" grid h-[97dvh] grid-cols-2 sm:grid-cols-3 gap-5 pt-[10vh] md:pt-[15vh] overflow-y-scroll px-[8vw] sm:px-[13vw]  md:px-[10vw] lg:grid-cols-6 lg:px-[8vw]  xl:px-[13vw]  pb-[15vh]">
+                    className=" grid h-[97dvh] grid-cols-2 sm:grid-cols-3 gap-5 pt-[10dvh] md:pt-[15dvh] overflow-y-scroll px-[8vw] sm:px-[13vw]  md:px-[10vw] lg:grid-cols-6 lg:px-[8vw]  xl:px-[13vw]  pb-[5dvh]">
                     {data?.map((surah) => (
                         <Surah surah={surah} key={surah.number} />
                     ))}

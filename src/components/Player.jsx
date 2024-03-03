@@ -74,10 +74,10 @@ function Player() {
             <div
                 className={`bg-white ${
                     isOpen ? "" : "border-t-2"
-                }  border-stone-200 h-[9vh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 sm:px-80 `}>
+                }  border-stone-200 h-[9dvh] z-20 w-screen flex flex-col absolute bottom-3 rounded-md items-center justify-between px-3 sm:px-80 `}>
                 <div className="flex items-center justify-center gap-3 mt-auto">
                     <div
-                        className={`text-3xl  inline-block ${
+                        className={`text-3xl bg-black inline-block ${
                             isLoading ? "p-3" : ""
                         }  w-[3.5rem] h-[3.5rem] rounded-md`}>
                         {
@@ -141,7 +141,7 @@ function Player() {
             </div>
 
             <div
-                className={`bg-white h-[50vh] ${
+                className={`bg-white h-[50dvh] ${
                     isOpen ? "" : "hidden translate-y-full"
                 } absolute bottom-0 z-0 border-t-2 rounded-t-md border-stone-300  transition-all duration-100 w-screen flex  justify-center`}>
                 <IoIosArrowDown
@@ -173,12 +173,12 @@ function SelectReciter({ reciters, current, setReciter }) {
             style={{
                 fontFamily: "Amiri Quran",
             }}
-            className={`text-xl mt-14  rounded-md w-[50%] h-[30vh] flex items-center ${
+            className={`text-xl mt-14  rounded-md w-[70%] lg:w-[50%] h-[30dvh] flex items-center ${
                 isOpen ? "bg-stone-100" : ""
             }  flex-col`}>
             <div
                 onClick={HandleChoices}
-                className={` h-[7vh] relative w-full bg-stone-100 flex items-center  ${
+                className={` h-[7dvh] relative w-full bg-stone-100 flex items-center  ${
                     isOpen ? " rounded-t-md" : "rounded-md"
                 } `}>
                 <p className="leading-10 text-center w-full h-full  ">{current.name}</p>
@@ -197,7 +197,7 @@ function SelectReciter({ reciters, current, setReciter }) {
                                 setReciter(re.id);
                                 setIsOpen(false);
                             }}
-                            className=" h-[7vh] flex items-center gap-5 felx-col justify-center"
+                            className=" h-[7dvh] flex items-center gap-5 felx-col justify-center"
                             key={re.id}>
                             <p className="leading-10 h-full">{re.name}</p>
                         </div>
